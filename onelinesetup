@@ -1,9 +1,8 @@
 #!/bin/bash
 
-git init -qqq
-git remote add origin git@github.com:betooliveirame/onlinesetup.git
-git fetch origin -qqq
-git checkout origin/master -- tmp
-rm -rf .git
-bash ./tmp/setup "$@"
-rm -rf ./tmp/
+git init -qqq&&
+git remote add origin git@github.com:betooliveirame/onlinesetup.git&&
+git fetch origin -qqq&&
+git checkout origin/master -- setup
+bash ./setup "$@"
+rm -rf ./setup
