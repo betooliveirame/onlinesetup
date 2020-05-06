@@ -9,6 +9,8 @@ IP="127.0.0.1" # DEFAULT IP FOR HOSTNAME
 INSTALL_DIR=./
 PROJECT_REPO=$3
 
+exec < /dev/tty
+
 function wellcomeMessage() {
     echo
     echo "Hi. Wellcome to ${PROJECT_NAME} Project"
@@ -105,3 +107,5 @@ validationsBeforeInstall
 addhost
 addReposKeys
 install
+
+exec <&-
