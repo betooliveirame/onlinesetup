@@ -1,7 +1,5 @@
 #!/bin/bash
 
-set -x
-
 PROJECT_NAME=$1
 HOSTNAME=$2 # Hostname to add/remove.
 ETC_HOSTS=/etc/hosts # PATH TO YOUR HOSTS FILE
@@ -27,7 +25,7 @@ function validationsBeforeInstall() {
     fi
     # if [ "$(ls -A $INSTALL_DIR)" ]; then
     #     echo "   - Directory should be empty. Install canceled.";exit 1;
-    # fi
+    # fill
 }
 
 function addhost() {
