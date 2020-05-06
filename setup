@@ -23,9 +23,9 @@ function validationsBeforeInstall() {
     else
         echo "   - Composer alredy installed Ok."
     fi
-    # if [ "$(ls -A $INSTALL_DIR)" ]; then
-    #     echo "   - Directory should be empty. Install canceled.";exit 1;
-    # fi
+    if [ "$(ls -A $INSTALL_DIR)" ]; then
+        echo "   - Directory should be empty. Install canceled.";exit 1;
+    fi
 }
 
 function addhost() {
